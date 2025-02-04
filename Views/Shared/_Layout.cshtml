@@ -1,0 +1,25 @@
+<!-- Views/Shared/_Layout.cshtml -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>@ViewData["Title"] - MyDotnetWebApp</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/Home/About">About</a>
+    </nav>
+  </header>
+  <main role="main">
+    @RenderBody()
+  </main>
+  <footer>
+    <p>&copy; @DateTime.Now.Year - MyDotnetWebApp</p>
+  </footer>
+</body>
+
+</html>
