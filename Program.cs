@@ -33,6 +33,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapGet("/workspace", () =>
+{
+    // You can return any data you want here.
+    return "Hello from the workspace!";
+});
+
 // Configure the default route for MVC.
 // This tells ASP.NET Core to use the Home controller and its Index action by default.
 app.MapControllerRoute(
