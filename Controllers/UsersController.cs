@@ -24,7 +24,6 @@ namespace MyDotnetWebApp.Controllers
       {
         return NotFound();
       }
-
       // Return the "Details" view, passing in the user as the model.
       return View(user);
     }

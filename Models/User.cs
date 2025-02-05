@@ -8,5 +8,9 @@ namespace MyDotnetWebApp.Models
     public string Email { get; set; }
     public string Password { get; set; }
 
+    public virtual string DoWork()
+    {
+      return "The User doing user things!";
+    }
   }
 }
