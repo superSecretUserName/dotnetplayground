@@ -12,6 +12,8 @@ services:
     environment:
       # This connection string will be picked up by the .NET app.
       - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=mydb;Username=postgres;Password=example
+      # This environment variable is used to enable the .NET file watcher.
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
     depends_on:
       - db        # Ensures the DB service starts before the web app.
 
