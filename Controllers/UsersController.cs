@@ -1,3 +1,5 @@
+using System.Net.Http.Json;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyDotnetWebApp.Models; // Adjust the namespace if your User model is in a different one
@@ -19,7 +21,8 @@ namespace MyDotnetWebApp.Controllers
     {
       // Try to find the user with the specified id.
       var user = await _context.Users.FindAsync(id);
-
+      var json = JsonSerializer.Serialize(user, new JsonSerializerOptions { WriteIndented = true });
+      return Content(json, "application/json");
       if (user == null)
       {
         return NotFound();

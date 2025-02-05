@@ -1,6 +1,11 @@
+using System.Text.Json.Serialization;
+
 namespace MyDotnetWebApp.Models
 {
-  public class User
+  [JsonPolymorphic(TypeDiscriminatorPropertyName = "$type")]
+  [JsonDerivedType(typeof(Teacher), "teacher")]
+  [JsonDerivedType(typeof(Student), "student")]
+  public abstract class User
   {
     public int Id { get; set; }
     public string FirstName { get; set; }
