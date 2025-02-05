@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using AppDbContext = MyDotnetWebApp.AppDbContext;
+using MyDotnetWebApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,11 +34,6 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapGet("/workspace", () =>
-{
-    // You can return any data you want here.
-    return "Hello from the workspace!";
-});
 
 // Configure the default route for MVC.
 // This tells ASP.NET Core to use the Home controller and its Index action by default.
