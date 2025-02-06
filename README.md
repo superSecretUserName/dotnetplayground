@@ -158,6 +158,7 @@ Logout User (Stub)
 
 ## Notes:
 
+- The docker orchestration is setup to host the webserver on port: 1234. If this conflicts, update teh `docker-compose.yml` file
 - The application is setup to automatically run any pending migrations and then seed the database with some entries upon launch.
 - Currently, the login and logout endpoints are placeholders.
 - Since this is just a local project to learn some .NET, the database connection string is hardcoded into Program.cs.
