@@ -12,6 +12,9 @@ namespace MyDotnetWebApp
 
         // Add the Users model so EF Core can track it.
         public DbSet<User> Users { get; set; }
+        // Add the Teacher and Student models incase we want to retrieve them directly.
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
