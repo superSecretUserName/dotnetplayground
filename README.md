@@ -17,4 +17,7 @@ cd path/to/your/project
 docker-compose up -d
 ```
 
-The application is setup to automatically run any pending migrations and then seed the database with some entries upon launch.
+## Notes:
+
+- The application is setup to automatically run any pending migrations and then seed the database with some entries upon launch.
+- Since this is just a local project to learn some .NET, the database connection string is hardcoded into Program.cs.
