@@ -39,8 +39,11 @@ cd path/to/your/project
 docker-compose up -d
 ```
 
-API Endpoints
-Common User Operations (UsersController)
+As a part of the bootstrapping process, migrations and seeders will run if necessary.
+
+## API Endpoints
+
+### Common User Operations (UsersController)
 
     Get User by ID
         Endpoint: GET /api/users/{id}
@@ -87,7 +90,7 @@ Logout User (Stub)
           "message": "Logout successful (stub)"
         }
 
-Teacher Operations (TeachersController)
+### Teacher Operations (TeachersController)
 
     Get All Teachers
         Endpoint: GET /api/teachers
@@ -120,7 +123,7 @@ Teacher Operations (TeachersController)
         Endpoint: DELETE /api/teachers/{id}
         Description: Deletes a teacher.
 
-Student Operations (StudentsController)
+### Student Operations (StudentsController)
 
     Get All Students
         Endpoint: GET /api/students
