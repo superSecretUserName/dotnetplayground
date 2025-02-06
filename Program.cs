@@ -27,6 +27,20 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Ensure migrations are applied and then seed the DB if necessary.
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDbContext>();
+
+    // This applies all pending migrations.
+    context.Database.Migrate();
+
+    // Now run the seeder.
+    await MyDotnetWebApp.SeedData.InitializeAsync(services);
+}
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
